@@ -33,7 +33,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 // routes
 app.use("/", require("./routes/root"));
 app.use("/users", require("./routes/userRoutes"));
-//TODO: add the notes roues here
+app.use("/notes", require("./routes/noteRoutes"));
 
 // app.all("*", (req, res) => {...}): This sets up a route handler that matches all HTTP methods (GET, POST, PUT, DELETE, etc.) for the specified path.
 app.all("*", (req, res) => {
